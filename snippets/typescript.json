@@ -8,13 +8,22 @@
       "@Component({",
       "\tmoduleId: module.id,",
       "\tselector: '${selector}',",
-      "\ttemplateUrl: '${feature}.component.html'",
+      "\ttemplateUrl: '${feature}.component.pug'",
       "})",
-      "export class ${Feature}Component implements OnInit {",
-      "\tconstructor() { }",
+      "class ${Feature}Component implements OnInit",
+      "{",
+      "\tconstructor()",
+      "{",
       "",
-      "\tngOnInit() { }$0",
-      "}"
+      "}",
+      "",
+      "\tngOnInit()",
+      "{",
+      "",
+      "}$0",
+      "}",
+      "",
+      "export { ${Feature}Component }"
     ]
   },
   "Angular Service": {
@@ -157,8 +166,13 @@
       "\tdeclarations: [${Name}Component],",
       "\tproviders: [],",
       "})",
-      "export class ${Name}Module { }",
-      "$0"
+      "class ${Name}Module",
+      "{",
+      "",
+      "}",
+      "$0",
+      "export { ${Name}Module }",
+      "export { ${Name}Component }"
     ]
   }
 }
